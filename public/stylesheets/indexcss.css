@@ -1,0 +1,28 @@
+*{
+    box-sizing: border-box;
+}
+
+.thing{
+    background-color:red;
+    text-align:center;
+}
+.head{
+
+}
+.hey{
+    width:97%;
+    margin:0 auto;
+}
+.x{
+    padding:0;
+    margin:0;
+}
+footer h2{
+    background-color:#999;
+}
+.a{
+    background-color:#ff3f3f;
+}
+.t{
+    background-color:cyan;
+}
