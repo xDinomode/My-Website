@@ -18,13 +18,12 @@
 
 
 </head>
-<body>
+<body onload = "start()">
 
     <!-- HEADER -->
     <header class = "head pure-g">
-        <h1 class = "x thing pure-u-1">My website</h1>
+        <h1 class = "x thing pure-u-1">test</h1>
     </header>
-    <!-- END HEADER -->
 
     <h2>This is my <%= title %></h2>
     <h3>Testing etag</h3>
@@ -51,8 +50,100 @@
             </div>
         </h2>
     </footer>
-    <!--- END FOOTER -->
+
+    <div class = "pure-g">
+        <canvas id = "myCanvas"></canvas>
     </div>
+
+    </div>
+
+    <!--TESTING WEBGL-->
+    <script>
+    var gl;
+
+    function start(){
+        var canvas = document.getElementById("myCanvas");
+        canvas.width = 500;
+        canvas.height = 450;
+        gl = getContext(canvas);
+
+        if(gl){
+            gl.clearColor(0.0, 0.0, 0.0, 1.0);
+            gl.enable(gl.DEPTH_TEST);
+            gl.viewport(0,0,canvas.width, canvas.height);
+            gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+        }
+
+    }
+
+    function getContext(canvas){
+        try{
+            gl = canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
+        } catch(e){
+
+        }
+        if(!gl){
+            alert("Please upgrade to a web browser that supports webgl");
+            gl = null;
+        }
+        return gl;
+    }
+    </script>
+
+
+    <!-- IndexDB-->
+    // <script>
+    //     window.indexedDB = window.indexedDB;
+    //     window.IDBTransaction = window.IDBTransaction;
+    //     window.IDBKeyRange = window.IDBKeyRange;
+
+    //     var db;
+    //     var customerData= [
+    //         {ssn: "444-44-4444", name: "Bill", age: 35, email: "bill@gmail.com"},
+    //         {ssn: "555-55-555", name: "Donna", age: 22, email: "donna@gmail.com"}
+    //     ];
+    //     if(!window.indexedDB){
+    //         alert("You dont support db");
+    //     } else {
+    //         var request = window.indexedDB.open("MyTestDatabase", 3);
+    //         request.onerror = function(event){
+    //             alert("didn't work")
+    //         };
+    //         request.onsuccess = function(event){
+    //             request.onupgradedneeded = function(event){
+    //                 db = event.target.result;
+
+    //                 var objectStore = db.createObjectStore("customers", {keyPath: "ssn"});
+    //                 objectStore.createIndex("name", "name", {unique: false});
+    //                 objectStore.createIndex("email", "email", {unique: true});
+
+    //                 objectStore.transaction.complete = function(event){
+    //                     var customerObjectStore = db.transaction("customers", "readwrite").objectStore("customers");
+    //                     for(var i in customerData){
+    //                         customerObjectStore.add(customerData[i]);
+    //                     }
+    //                 };
+    //             }
+    //         }
+    //     }
+    // </script>
+
+    <!--WEB WORKERS-->
+    // <script>
+    //         if(typeof(Worker) !=="undefined"){
+    //             var w = new Worker("javascripts/my_worker.js");
+
+    //             w.addEventListener("message", function(e){
+    //                 console.log("Worker said" + e.data);
+    //                 w.terminate();
+    //                 w = undefined;
+    //             }, false);
+
+    //             w.postMessage("Im worker one!");
+    //         } else {
+    //             alert("Your browser doesn't support web workers");
+    //         }
+    // </script>
 
 </body>
 </html>

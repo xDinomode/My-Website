@@ -1,0 +1,2 @@
+1. implement IndexedDB for offline storage of some sorts
+2. implement Page Visibility API to check if users tabs out
