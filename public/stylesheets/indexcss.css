@@ -3,12 +3,12 @@
 }
 
 .thing{
-    background-color:#111;
     text-align:center;
     color:#fff;
 }
 .head{
-
+    background-color:#2a3744;
+    padding:3px;
 }
 .hey{
     width:97%;

@@ -35,6 +35,23 @@
         <div class = "pure-u-1-3" style = "background-color:cyan"> <p>Tet3</p></div>
     </div>
 
+    <button id = "button" class = "pure-button">
+        Hello
+    </button>
+    <button id = "stopit" class = "pure-button">
+        Stop that
+    </button>
+    <script>
+        var button = document.getElementById("button");
+        button.addEventListener("click", function(e){
+            console.log("Button clicked"), false
+        });
+    </script>
+
+    <audio src="kygo.ogg" controls>
+        <p>your browser doesnt support audio</p>
+    </audio>
+
     <!-- FOOTER -->
     <footer class = "pure-g">
         <h2 class = "a pure-u-1-2">
