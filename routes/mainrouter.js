@@ -2,7 +2,7 @@ var express = require("express");
 var route = express.Router();
 
 route.get("/", function(req, res){
-	res.render("index", {title: "Home Page", message: null});
+	res.render("index", {title: "Home Page", message: "Cats are cool"});
 });
 
 route.get("/:thing", function(req, res){
