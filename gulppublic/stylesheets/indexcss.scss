@@ -1,0 +1,114 @@
+//p element style
+$PfontSize: 19px;
+$PlineHeight: 1.45;
+$PfontFamily: "Source Sans Pro";
+
+//Top alert box style
+$AlertMessageColor: #292929;
+$AlertMessageHeight: 37px;
+$AlertMessageFontColor: #fff;
+$AlertMessageButtonColor: black;
+$AlertMessageButtonColorHover: #018DEF;
+
+//Nav Wrapper style
+$NavWrapperHeight: 48px;
+$NavWrapperBorderBottom: 1px solid #c9c9c9;
+$NavWrapperBackgroundColor: #EEEEEE;
+
+//Nav Anchor style
+$NavAnchorColorHover: #018DEF;
+
+//Main Section Wrapper style
+$MainSectionWidth: 94%;
+$MainSectionH1Color: #777;
+
+//Footer style
+$FooterBackgroundColor:#292929;
+$FooterFontColor:#75f259;
+$FooterFontSize: 12px;
+
+*{
+    box-sizing: border-box;
+}
+
+p{
+    font-size: $PfontSize;
+    line-height:$PlineHeight;
+    font-family:$PfontFamily;
+}
+
+
+.alertWrapperShown{
+    display:block;
+    height:$AlertMessageHeight;
+    transition:all 0.34s ease-out;
+}
+.alertWrapperHidden{
+    height:0px;
+    display:hidden;
+}
+.message{
+    padding:0;
+    margin:0;
+    width:100%;
+    height:$AlertMessageHeight;
+    text-align:center;
+    line-height: 37px;
+    background-color:$AlertMessageColor;
+    color: $AlertMessageFontColor;
+}
+.xbutton{
+    padding:0;
+    margin:0;
+    width:100%;
+    height:$AlertMessageHeight;
+    color:$AlertMessageButtonColor;
+    border:none;
+    transition:color .27s;
+}
+.xbutton:hover{
+    color:$AlertMessageButtonColorHover;
+}
+
+
+.navWrapper{
+    height: $NavWrapperHeight;
+    border-bottom:$NavWrapperBorderBottom;
+    background-color:$NavWrapperBackgroundColor;
+    margin-bottom: 1em;
+    overflow:hidden;
+}
+.listWrapper{
+    text-align:center;
+    height: $NavWrapperHeight;
+    line-height: 30px;
+}
+.navAnchor{
+    width:100%;
+    height:100%;
+    transition: all 0.15s;
+}
+.navAnchor:hover{
+    color:$NavAnchorColorHover;
+}
+#ul li:nth-child(5) a:hover{
+    border-right:none;
+}
+
+
+
+.mainWrapper{
+    width:$MainSectionWidth;
+    margin:0 auto;
+}
+.mainLink{
+    color:$MainSectionH1Color;
+    text-decoration:none;
+}
+
+.footerWrapper{
+    background-color:$FooterBackgroundColor;
+    color:$FooterFontColor;
+    font-size:$FooterFontSize;
+}
+
