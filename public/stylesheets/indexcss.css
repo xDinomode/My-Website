@@ -60,6 +60,12 @@ p {
 #ul li:nth-child(5) a:hover {
   border-right: none; }
 
+.tutorialBoxes {
+  text-align: center;
+  padding: 7px; }
+  .tutorialBoxes h2 {
+    color: #018DEF; }
+
 .mainWrapper {
   width: 94%;
   margin: 0 auto; }
