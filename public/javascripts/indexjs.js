@@ -30,22 +30,22 @@ if(xmessage !== null || ""){
          box.classList.add("alertWrapperHidden");
     },false);
 }
+// 
+// var utter = new SpeechSynthesisUtterance();
+// speechSynthesis.getVoices();
+// setTimeout(function(){
+//     speechSynthesis.getVoices();
+//     utter.voice = speechSynthesis.getVoices()[3];
+// }, 1000);
 
-var utter = new SpeechSynthesisUtterance();
-speechSynthesis.getVoices();
-setTimeout(function(){
-    speechSynthesis.getVoices();
-    utter.voice = speechSynthesis.getVoices()[3];
-}, 1000);
-
-
-var speak = document.getElementById("speak");
-speak.addEventListener("click", function(e){
-    e.preventDefault();
-    var utterance = document.getElementById("utterance");
-    var text = utterance.value;
-    utter.text = text;
-    speechSynthesis.speak(utter);
-    console.log(text);
-    utterance.value = "";
-}, false);
+//
+// var speak = document.getElementById("speak");
+// speak.addEventListener("click", function(e){
+//     e.preventDefault();
+//     var utterance = document.getElementById("utterance");
+//     var text = utterance.value;
+//     utter.text = text;
+//     speechSynthesis.speak(utter);
+//     console.log(text);
+//     utterance.value = "";
+// }, false);

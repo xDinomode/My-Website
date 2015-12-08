@@ -60,3 +60,9 @@ body {
 
 #ul li:nth-child(5) a:hover {
   border-right: none; }
+
+.footerWrapper {
+  border-top: 5px solid #00B32D;
+  background-color: #292929;
+  color: #75f259;
+  font-size: 12px; }
