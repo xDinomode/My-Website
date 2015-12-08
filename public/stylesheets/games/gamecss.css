@@ -2,12 +2,7 @@
   box-sizing: border-box; }
 
 body {
-  background-color: #fff; }
-
-p {
-  font-size: 19px;
-  line-height: 1.45;
-  font-family: "Source Sans Pro"; }
+  background-color: #0b0b0b; }
 
 .alertWrapperShown {
   display: block;
@@ -65,22 +60,3 @@ p {
 
 #ul li:nth-child(5) a:hover {
   border-right: none; }
-
-.tutorialBoxes {
-  text-align: center;
-  padding: 7px; }
-  .tutorialBoxes h2 {
-    color: #018DEF; }
-
-.mainWrapper {
-  width: 94%;
-  margin: 0 auto; }
-
-.mainLink {
-  color: #777;
-  text-decoration: none; }
-
-.footerWrapper {
-  background-color: #292929;
-  color: #75f259;
-  font-size: 12px; }

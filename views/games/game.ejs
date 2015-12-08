@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title> <%= title %> </title>
+
+  <!-- purecss.io -->
+  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-old-ie-min.css">
+ <![endif]-->
+ <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+ <!--<![endif]-->
+
+
+  <!-- my custom css -->
+  <link rel="stylesheet" href="/stylesheets/games/gamecss.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class = "pure-g">
+      <!--Special Alerts-->
+      <% if(message !== null) {%>
+          <div class = "alertWrapperShown pure-u-1" id ="alertWrapper">
+              <div class = "pure-g">
+                  <div class = "pure-u-23-24">
+                      <h3 class = "message" id = "message1"><%= message %> </h3>
+                  </div>
+                  <div class = "pure-u-1-24">
+                      <button class = "xbutton" id = "xmessage">&#10006;</button>
+                  </div>
+              </div>
+          </div>
+      <% } %>
+
+
+
+      </i>
+      <div class = "pure-u-1">
+          <div class = "navWrapper pure-g">
+                  <div class = "pure-u-1">
+                          <div class = "listWrapper pure-menu pure-menu-horizontal">
+                               <ul class = "pure-menu-list" id = "ul">
+                                  <li class = "pure-menu-item"><a href="/" class = "navAnchor pure-menu-link">Home</a></li><li class = "pure-menu-item"><a href="/games" class = "navAnchor anchorSelected pure-menu-link">Games</a></li><li class = "pure-menu-item"><a href="#" class = "navAnchor pure-menu-link">null</a></li><li class = "pure-menu-item"><a href="#" class = "navAnchor pure-menu-link">null</a></li><li class = "pure-menu-item"><a href="#" class = "navAnchor pure-menu-link">null</a></li>
+                              </ul>
+                          </div>
+                  </div>
+          </div>
+      </div>
+  </header>
+
+
+
+  <script src="/javascripts/games/game.js"></script>
+</body>
+</html>

@@ -1,11 +1,3 @@
-//body
-$BackgroundColor: #fff;
-
-//p element style
-$PfontSize: 19px;
-$PlineHeight: 1.45;
-$PfontFamily: "Source Sans Pro";
-
 //Top alert box style
 $AlertMessageColor: #292929;
 $AlertMessageHeight: 37px;
@@ -21,31 +13,16 @@ $NavWrapperBackgroundColor: #EEEEEE;
 //Nav Anchor style
 $NavAnchorColorHover: #018DEF;
 
-//Main Section Wrapper style
-$MainSectionWidth: 94%;
-$MainSectionH1Color: #777;
-
-
-
-//Footer style
-$FooterBackgroundColor:#292929;
-$FooterFontColor:#75f259;
-$FooterFontSize: 12px;
-
 *{
     box-sizing: border-box;
 }
 
+//body
+$BackgroundColor: #0b0b0b;
+
 body{
-    background-color:$BackgroundColor;
+  background-color:$BackgroundColor;
 }
-
-p{
-    font-size: $PfontSize;
-    line-height:$PlineHeight;
-    font-family:$PfontFamily;
-}
-
 
 .alertWrapperShown{
     display:block;
@@ -105,32 +82,4 @@ p{
 }
 #ul li:nth-child(5) a:hover{
     border-right:none;
-}
-
-
-
-.tutorialBoxes{
-    h2{
-        color:$NavAnchorColorHover;
-    }
-    text-align:center;
-    padding:7px;
-}
-
-.mainWrapper{
-    width:$MainSectionWidth;
-    margin:0 auto;
-}
-.mainLink{
-    color:$MainSectionH1Color;
-    text-decoration:none;
-}
-
-
-
-
-.footerWrapper{
-    background-color:$FooterBackgroundColor;
-    color:$FooterFontColor;
-    font-size:$FooterFontSize;
 }
