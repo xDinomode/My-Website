@@ -5,6 +5,8 @@ var app = express();
 
 var bodyParser = require("body-parser");
 
+var favicon = require("serve-favicon");
+
 var route = require("./routes/mainrouter");
 
 app.set("view engine", "ejs");
@@ -15,6 +17,8 @@ app.set("views", "./views");
 
 //TODO: remove this and let nginx deliver static content later!!
 app.use(express.static("public"));
+
+app.use(favicon(__dirname + '/public/images/dino.ico'));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
