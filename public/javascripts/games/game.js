@@ -1,15 +1,1 @@
-var xmessage = null;
-
-
-try{
-   xmessage = document.getElementById("xmessage");
-} catch(e){
-
-}
-
-if(xmessage !== null || ""){
-    xmessage.addEventListener("click", function(){
-        var box = document.getElementById("alertWrapper");
-         box.classList.add("alertWrapperHidden");
-    },false);
-}
+var xmessage=null;try{xmessage=document.getElementById("xmessage")}catch(e){}null!==xmessage&&xmessage.addEventListener("click",function(){var e=document.getElementById("alertWrapper");e.classList.add("alertWrapperHidden")},!1);
