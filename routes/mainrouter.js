@@ -19,8 +19,11 @@ route.get("/Games/:id", function(req, res){
   res.send("Hello" + req.params.id);
 });
 
-route.get("/:thing", function(req, res){
-	res.send("Hello "  + req.params.thing);
-});
+// route.get("/:thing", function(req, res){
+// 	res.send("Hello "  + req.params.thing);
+// });
 
+route.get("/Donate", function(req, res){
+  res.render("donate", {title: "Donate", message: null});
+});
 module.exports = route;

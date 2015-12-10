@@ -35,6 +35,7 @@ gulp.task("compressjs", function(){
 
 gulp.task("default", function(){
     gulp.watch("./gulppublic/stylesheets/**/*.scss", ["sass"]);
+    gulp.watch("./gulppublic/stylesheets/*.scss", ["sass"]);
     gulp.watch(["app.js", "routes/**/*.js","public/javascripts/**/*.js"], ["jshint"]);
     gulp.watch("./public/stylesheets/**/*.css", ["minifycss"]);
     gulp.watch("./gulppublic/javascripts/**/*.js", ["compressjs"]);
