@@ -1,0 +1,182 @@
+//body
+$BackgroundColor: #fff;
+
+//p element style
+$PfontSize: 19px;
+$PlineHeight: 1.45;
+$PfontFamily: "Montserrat";
+
+//h1 element style
+$H1FontSize: 24px;
+$H1LineHeight: 1.45;
+$H1FontFamily: "Montserrat";
+
+//Top alert box style
+$AlertMessageColor: #292929;
+$AlertMessageHeight: 37px;
+$AlertMessageFontColor: #fff;
+$AlertMessageButtonColor: black;
+$AlertMessageButtonColorHover: #018DEF;
+
+//Nav Wrapper style
+$NavWrapperHeight: 48px;
+$NavWrapperBorderBottom: 1px solid #c9c9c9;
+$NavWrapperBackgroundColor: #EEEEEE;
+
+//Nav Anchor style
+$NavAnchorColorHover: #018DEF;
+
+//TutorialBoxes
+$H2TitleColor: #018DEF;
+
+
+
+//Footer style
+$FooterBackgroundColor:#292929;
+$FooterFontColor:#fff;
+$FooterFontSize: 12px;
+$FooterFontFamily: "Montserrat";
+
+//Footer p
+$FooterPColor:#fff;
+$FooterPFontWeight: 400;
+$FooterPPadding: 10px;
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+  background-color:$BackgroundColor;
+}
+
+p{
+    font-size: $PfontSize;
+    line-height:$PlineHeight;
+    font-family:$PfontFamily, sans-serif;
+}
+
+
+.alertWrapperShown{
+    display:block;
+    height:$AlertMessageHeight;
+    transition:all 0.34s ease-out;
+}
+.alertWrapperHidden{
+    height:0px;
+    display:hidden;
+}
+.message{
+    padding:0;
+    margin:0;
+    width:100%;
+    height:$AlertMessageHeight;
+    text-align:center;
+    line-height: 37px;
+    background-color:$AlertMessageColor;
+    color: $AlertMessageFontColor;
+}
+.xbutton{
+    padding:0;
+    margin:0;
+    width:100%;
+    height:$AlertMessageHeight;
+    color:$AlertMessageButtonColor;
+    border:none;
+    transition:color .27s;
+}
+.xbutton:hover{
+    color:$AlertMessageButtonColorHover;
+}
+
+
+.navWrapper{
+    height: $NavWrapperHeight;
+    border-bottom:$NavWrapperBorderBottom;
+    background-color:$NavWrapperBackgroundColor;
+    margin-bottom: 1em;
+    overflow:hidden;
+}
+.listWrapper{
+    text-align:center;
+    height: $NavWrapperHeight;
+    line-height: 30px;
+}
+.navAnchor{
+    width:100%;
+    height:100%;
+    transition: all 0.15s;
+}
+.navAnchor:hover{
+    color:$NavAnchorColorHover;
+}
+.anchorSelected{
+  color:black;
+}
+#ul li:nth-child(5) a:hover{
+    border-right:none;
+}
+
+.tutorialBoxes{
+    h1{
+      font-size: $H1FontSize;
+      line-height: $H1LineHeight;
+      font-family:$H1FontFamily, sans-serif;
+    }
+    h2{
+        color:$H2TitleColor;
+    }
+    text-align:center;
+    padding:7px;
+}
+
+
+.links{
+  color: $NavAnchorColorHover;
+  text-decoration:none;
+}
+.sectionWrapper{
+  width:80%;
+  margin: 0 auto;
+}
+.sectionTutorialWrapper{
+  text-align:center;
+  width:100%;
+}
+
+
+
+.footerWrapper{
+    border-top: 5px solid black;
+    background-color:$FooterBackgroundColor;
+    div{
+      text-align:center;
+      margin:0 auto;
+    }
+    p{
+      color:$FooterPColor;
+      font-weight:$FooterPFontWeight;
+      font-size:18px;
+      padding:$FooterPPadding;
+    }
+}
+.footerQuoteWrapper{
+    width:70%;
+}
+#footerPgithub{
+    padding:0;
+    color:#fff;
+}
+
+@media screen and(max-width:600px){
+  body{
+
+  }
+  .footerQuoteWrapper{
+    width:88%;
+  }
+}
+
+.t{
+  font-weight:400;
+}

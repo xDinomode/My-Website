@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title> <%= title %> </title>
+
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+  <!-- purecss.io -->
+  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-old-ie-min.css">
+ <![endif]-->
+ <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+ <!--<![endif]-->
+
+
+  <!-- my custom css -->
+  <link rel="stylesheet" href="/stylesheets/tutorials/tutorialscss.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class = "pure-g">
+      <!--Special Alerts-->
+      <% if(message !== null) {%>
+          <div class = "alertWrapperShown pure-u-1" id ="alertWrapper">
+              <div class = "pure-g">
+                  <div class = "pure-u-23-24">
+                      <h3 class = "message" id = "message1"><%= message %> </h3>
+                  </div>
+                  <div class = "pure-u-1-24">
+                      <button class = "xbutton" id = "xmessage">&#10006;</button>
+                  </div>
+              </div>
+          </div>
+      <% } %>
+
+
+      <div class = "pure-u-1">
+          <div class = "navWrapper pure-g">
+                  <div class = "pure-u-3-24">
+                    <img src="/images/dino.svg" class="" alt="dinosaurscode" width="100%">
+                  </div>
+                  <div class = "pure-u-21-24">
+                          <div class = "listWrapper pure-menu pure-menu-horizontal">
+                               <ul class = "pure-menu-list" id = "ul">
+                                  <li class = "pure-menu-item"><a href="/" class = "navAnchor pure-menu-link">Home</a></li><li class = "pure-menu-item"><a href="/games" class = "navAnchor pure-menu-link">Games</a></li><li class = "pure-menu-item"><a href="/tutorials" class = "navAnchor anchorSelected pure-menu-link">Tutorials</a></li>
+                              </ul>
+                          </div>
+                  </div>
+          </div>
+      </div>
+  </header>
+
+  <!--BODY SECTION WRAPPER-->
+  <section class = "sectionWrapper pure-g">
+        <div class = "sectionTutorialWrapper">
+            <div class = "tutorialBoxes pure-u-1">
+                <h2>NodeJS + Express</h2>
+                <p style = "t">NodeJS is most commonly used as a web server. We'll use it to handle the backend of our web apps. But first lets learn about express. Express is a web framework. "Whats's a web framework," you ask? It's pre-written code that makes your job as a developer simpler. You'll
+                need to have <a href="https://nodejs.org/en/" class = "links">NodeJS</a> installed, a text editor, and a command line/terminal open.</p>
+
+                <h1>Lets start by creating a new NodeJS project.</h1>
+            </div>
+        </div>
+  </section>
+
+
+<!-- FOOTER -->
+        <footer class = "footerWrapper pure-g">
+            <div class = "footerQuoteWrapper">
+              <div class = "pure-u-12-24">
+                  <p>DinosaursCode is a personal project in which I'll be hosting my ludum dare 34 game. I will also be posting coding tutorials for NodeJS.</p>
+              </div>
+              <div class = "pure-u-12-24">
+                  <p>Donations are appreciated</p>
+                  <a href="/donate" class="pure-button">Donate! <i class="fa fa-paypal"></i></a>
+              </div>
+            </div>
+
+            <div class = "pure-u-1">
+                <p id = "footerPgithub">This website is open source!</p>
+                <a href="https://github.com/xDinomode/My-Website"><img src="/images/octocat.png" alt="octocat"></a>
+            </div>
+        </footer>
+
+
+
+  <script src="/javascripts/games/game.js"></script>
+
+  <!--GOOGLE ANALYTICS-->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-71284184-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+</body>
+</html>

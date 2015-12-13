@@ -49,7 +49,7 @@
                   <div class = "pure-u-21-24">
                           <div class = "listWrapper pure-menu pure-menu-horizontal">
                                <ul class = "pure-menu-list" id = "ul">
-                                  <li class = "pure-menu-item"><a href="/" class = "navAnchor pure-menu-link">Home</a></li><li class = "pure-menu-item"><a href="/games" class = "navAnchor anchorSelected pure-menu-link">Games</a></li>
+                                  <li class = "pure-menu-item"><a href="/" class = "navAnchor pure-menu-link">Home</a></li><li class = "pure-menu-item"><a href="/games" class = "navAnchor anchorSelected pure-menu-link">Games</a></li><li class = "pure-menu-item"><a href="/tutorials" class = "navAnchor pure-menu-link">Tutorials</a></li>
                               </ul>
                           </div>
                   </div>
@@ -57,8 +57,11 @@
       </div>
   </header>
 
+          <section class = "pure-g">
+              <div class = "gameWrapper pure-u-1" id ="game">
 
-<h1 style="color:white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium velit suscipit eos adipisci, est distinctio veritatis animi obcaecati pariatur, enim, consectetur quaerat qui quisquam quos officia neque ipsa rem. Excepturi et provident, natus praesentium quos nostrum labore, ullam, corporis nam dolores voluptatem laboriosam nesciunt dignissimos iste delectus officiis tempora cum enim temporibus accusantium architecto illo earum maxime perferendis ipsa. Aliquam, corporis culpa deserunt neque tempora nam temporibus ad voluptatem amet excepturi optio explicabo rerum, numquam esse a. Expedita deserunt commodi rerum dignissimos deleniti aut blanditiis quas enim, distinctio, odit maxime. Cumque minus eligendi voluptatibus mollitia fugit quia, ipsum obcaecati ea quaerat possimus distinctio accusantium perferendis omnis iusto? Tenetur natus modi deserunt laudantium quam, dignissimos harum repellat, blanditiis aperiam hic ea. Blanditiis distinctio, dignissimos reiciendis doloribus reprehenderit odit optio ex, omnis perferendis sed iure? Velit iste laborum dicta sapiente harum eos quam tempore incidunt, officia aspernatur animi. Commodi enim illo officiis consequatur id omnis, iste qui ad. Expedita, quia quas fuga ullam aliquid distinctio, eligendi ad perferendis corporis autem. Libero ullam beatae, excepturi rerum recusandae sequi officia dicta perspiciatis eos aspernatur cupiditate adipisci atque accusantium animi accusamus, magni dolor nesciunt omnis. Sunt aliquid saepe, temporibus expedita voluptate aspernatur molestiae provident reprehenderit.</h1>
+              </div>
+          </section>
 
 <!-- FOOTER -->
         <footer class = "footerWrapper pure-g">
@@ -91,6 +94,17 @@
 
     ga('create', 'UA-71284184-1', 'auto');
     ga('send', 'pageview');
+  </script>
+
+  <script src ="https://cdnjs.cloudflare.com/ajax/libs/phaser/2.4.4/phaser.min.js"></script>
+  <script src ="/javascripts/games/play.js"></script>
+  <script>
+      var game = new Phaser.Game(800, 500, Phaser.Canvas, "game");
+      var cursors;
+
+      game.state.add("Play", Play);
+      game.state.start("Play");
+
   </script>
 </body>
 </html>

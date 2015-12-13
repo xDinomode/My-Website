@@ -19,6 +19,11 @@ route.get("/Games/:id", function(req, res){
   res.send("Hello" + req.params.id);
 });
 
+//Tutorials page router
+route.get("/Tutorials", function(req, res){
+  res.render("tutorials/tutorials", {title: "Tutorials", message: null});
+});
+
 // route.get("/:thing", function(req, res){
 // 	res.send("Hello "  + req.params.thing);
 // });
